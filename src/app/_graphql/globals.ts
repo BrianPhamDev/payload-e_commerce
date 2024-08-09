@@ -16,7 +16,8 @@ query Header {
 
 export const FOOTER = `
   Footer {
-    navItems {
+  copyright
+    navItems {    
       link ${LINK_FIELDS({ disableAppearance: true })}
 		}
   }
