@@ -22,8 +22,6 @@ const Products = async () => {
       draft: isDraftMode,
     })
 
-    console.log(page)
-
     categories = await fetchDocs<Category>('categories')
   } catch (error) {
     console.log(error)
