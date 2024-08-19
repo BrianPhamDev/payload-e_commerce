@@ -10,7 +10,15 @@ import { RemoveFromCartButton } from '../../../_components/RemoveFromCartButton'
 
 import classes from './index.module.scss'
 
-const CartItem = ({ product, title, metaImage, qty, addItemToCart }) => {
+interface CartItemProps {
+  product: any
+  title: string
+  metaImage: any
+  qty: number
+  addItemToCart: (item: { product: any; quantity: number }) => void
+}
+
+const CartItem: React.FC<CartItemProps> = ({ product, title, metaImage, qty, addItemToCart }) => {
   const [quantity, setQuantity] = useState(qty)
 
   const decrementQty = () => {
