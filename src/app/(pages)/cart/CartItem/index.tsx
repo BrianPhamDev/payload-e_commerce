@@ -18,13 +18,7 @@ interface CartItemProps {
   addItemToCart: (item: { product: any; quantity: number }) => void
 }
 
-export default async function CartItem({
-  product,
-  title,
-  metaImage,
-  qty,
-  addItemToCart,
-}: CartItemProps) {
+const CartItem: React.FC<CartItemProps> = ({ product, title, metaImage, qty, addItemToCart }) => {
   const [quantity, setQuantity] = useState(qty)
 
   const decrementQty = () => {
@@ -100,3 +94,5 @@ export default async function CartItem({
     </li>
   )
 }
+
+export default CartItem
