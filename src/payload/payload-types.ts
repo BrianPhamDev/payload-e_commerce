@@ -176,6 +176,7 @@ export interface Media {
   width?: number | null;
   height?: number | null;
 }
+
 export interface Category {
   id: string;
   title: string;
